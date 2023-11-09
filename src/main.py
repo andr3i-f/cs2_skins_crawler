@@ -4,6 +4,8 @@ import config
 
 '''
 If there are multiple bots (i.e. skinfloat, csfloat) implement multithreading
+andrei
+
 '''
 
 def main():
