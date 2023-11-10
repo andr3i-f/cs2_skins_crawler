@@ -22,7 +22,7 @@ class Csfloat(crawler.Crawler):
                 print("bonked, sleeping for 5 minutes")
                 time.sleep(self.timeoutTimer)
             else:
-                print(items.status_code)
+                #print(items.status_code)
                 items = items.json()
                 for item in items:
                     currentItem = {}
