@@ -87,7 +87,10 @@ class Csfloat(crawler.Crawler):
                         if currentItem["id"] not in self.notifiedItems or (currentItem["id"] in self.notifiedItems and currentItem["price"] < self.notifiedItems[currentItem["id"]]):
                             self.notifiedItems[currentItem["id"]] = currentItem["price"]
                             if not self.firstPass:
-                                self.notifier.sendMessage(self.createItemEmbed(currentItem))
+                                if currentItem["float"] == "N/A":
+                                    self.notifier.sendMessage(self.createItemEmbed(currentItem), 1)
+                                elif currentItem["float"] != "N/A":
+                                    self.notifier.sendMessage(self.createItemEmbed(currentItem), 0)
 
             if self.firstPass:
                 self.firstPass = False
