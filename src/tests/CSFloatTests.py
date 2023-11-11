@@ -1,6 +1,6 @@
 import unittest
 import json
-from src.crawlers import csfloat, item
+from crawlers import csfloat, item
 
 """
 CSFloatTestData consists of checking for:
@@ -14,7 +14,7 @@ CSFloatTestData consists of checking for:
 Prices of items have been adjusted so it has a discount %
 """
 
-with open("tests/CSFloatTestData.json", encoding="utf-8") as f:
+with open("src/tests/CSFloatTestData.json", encoding="utf-8") as f:
     data = json.load(f)
 
 correctItemsList = [
