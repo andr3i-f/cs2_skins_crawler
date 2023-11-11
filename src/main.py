@@ -13,6 +13,6 @@ def main():
     csfloatBot = csfloat.Csfloat(config.highestDiscountLink, notifyBot)
 
     while True:
-        csfloatBot.searchItems()
+        csfloatBot.runCrawler()
 
 main()

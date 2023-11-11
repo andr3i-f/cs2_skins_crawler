@@ -1,8 +1,9 @@
 import discord
 
 class Item:
-    def __init__(self, name, price, discount, floatValue, image_link, id, link, inspect_link, watchers, color):
+    def __init__(self, name, price, discount, floatValue, image_link, id, link, inspect_link, watchers, color, wear_name):
         self.name = name
+        self.wear_name = wear_name
         self.float = floatValue
         self.price = price
         self.discount = discount
@@ -19,6 +20,7 @@ class Item:
         embed.set_image(url=self.image_link)
         embed.add_field(name="Price", value=f'${self.price}', inline=True)
         embed.add_field(name="Discount", value=f'{self.discount}%', inline=True)
+        embed.add_field(name="Wear", value=f'{self.wear_name}', inline=True)
         embed.add_field(name="Float", value=self.float, inline=True)
         embed.add_field(name="Inspect", value=self.inspect_link, inline=True)
         embed.add_field(name="Watchers", value=self.watchers, inline=True)

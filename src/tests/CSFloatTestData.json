@@ -1,0 +1,503 @@
+[
+  {
+    "id": "641299126818049306",
+    "created_at": "2023-11-05T15:33:46.595878Z",
+    "type": "buy_now",
+    "price": 163900,
+    "state": "listed",
+    "seller": {
+      "avatar": "https://avatars.steamstatic.com/448e147319213f648ebf88ccfb5c080b451447b9_full.jpg",
+      "away": false,
+      "flags": 560,
+      "has_valid_steam_api_key": true,
+      "online": false,
+      "stall_public": true,
+      "statistics": {
+        "median_trade_time": 142,
+        "total_avoided_trades": 0,
+        "total_failed_trades": 0,
+        "total_trades": 38,
+        "total_verified_trades": 38
+      },
+      "steam_id": "76561198111326610",
+      "username": "Umbral",
+      "verification_mode": "key"
+    },
+    "reference": {
+      "base_price": 173389,
+      "float_factor": 1.0725745,
+      "predicted_price": 185973,
+      "quantity": 98,
+      "last_updated": "2023-11-10T21:40:04.013243Z"
+    },
+    "item": {
+      "asset_id": "34269345930",
+      "def_index": 508,
+      "paint_index": 38,
+      "paint_seed": 630,
+      "float_value": 0.011039887554943562,
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf3qr3czxb49KzgL-KlsjyMr_UqWdY781lteXA54vwxgLi-0FrNWqiI4CWIw5sYQnY81m3xLjs18LouZjNwXc3uCF27SuOy0SpwUYbghNKfR8",
+      "d_param": "14268530494874687750",
+      "is_stattrak": true,
+      "is_souvenir": false,
+      "rarity": 6,
+      "quality": 3,
+      "market_hash_name": "★ StatTrak™ M9 Bayonet | Fade (Factory New)",
+      "low_rank": 165,
+      "high_rank": 527,
+      "tradable": 0,
+      "inspect_link": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198111326610A34269345930D14268530494874687750",
+      "has_screenshot": true,
+      "is_commodity": false,
+      "type": "skin",
+      "scm": {
+        "price": 196451,
+        "volume": 0
+      },
+      "rarity_name": "Covert",
+      "type_name": "Skin",
+      "item_name": "★ M9 Bayonet | Fade",
+      "wear_name": "Factory New",
+      "description": "It has been painted by airbrushing transparent paints that fade together over a chrome base coat.\\n\\n<i>This isn't just a weapon, it's a conversation piece - Imogen, Arms Dealer In Training</i>",
+      "fade": {
+        "seed": 630,
+        "percentage": 84.387054,
+        "rank": 781
+      }
+    },
+    "is_seller": false,
+    "min_offer_price": 162261,
+    "max_offer_discount": 100,
+    "is_watchlisted": false,
+    "watchers": 3
+  },
+  {
+    "id": "642929033788654581",
+    "created_at": "2023-11-10T03:30:26.699094Z",
+    "type": "buy_now",
+    "price": 97500,
+    "description": "Very blue playside pattern",
+    "state": "listed",
+    "seller": {
+      "avatar": "https://avatars.steamstatic.com/75d8cabbcfeae32386fabeaeea3a4b4799da0996_full.jpg",
+      "away": false,
+      "flags": 48,
+      "has_valid_steam_api_key": false,
+      "online": true,
+      "stall_public": true,
+      "statistics": {
+        "median_trade_time": 282,
+        "total_avoided_trades": 0,
+        "total_failed_trades": 0,
+        "total_trades": 7,
+        "total_verified_trades": 7
+      },
+      "steam_id": "76561198068833946",
+      "username": "dlib_",
+      "verification_mode": "inventory"
+    },
+    "reference": {
+      "base_price": 100274,
+      "float_factor": 1.0851381,
+      "predicted_price": 108811,
+      "quantity": 1297,
+      "last_updated": "2023-11-10T21:30:45.564909Z"
+    },
+    "item": {
+      "asset_id": "34328201057",
+      "def_index": 508,
+      "paint_index": 420,
+      "paint_seed": 434,
+      "float_value": 0.055800050497055054,
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf3qr3czxb49KzgL-KmsjwPKvBmm5D19V5i_rEprP5gVO8vywwMiukcZicd1BtZFiG-gPqkLjm1JO56ZqYnXJl6SAhtHePm0G0g0lIO-VpjfHMVxzAUO3kMgPo",
+      "d_param": "2911019610966456808",
+      "is_stattrak": false,
+      "is_souvenir": false,
+      "rarity": 6,
+      "quality": 3,
+      "market_hash_name": "★ M9 Bayonet | Doppler (Factory New)",
+      "high_rank": 596,
+      "tradable": 0,
+      "inspect_link": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198068833946A34328201057D2911019610966456808",
+      "has_screenshot": false,
+      "is_commodity": false,
+      "type": "skin",
+      "scm": {
+        "price": 106600,
+        "volume": 3
+      },
+      "rarity_name": "Covert",
+      "type_name": "Skin",
+      "item_name": "★ M9 Bayonet | Doppler",
+      "wear_name": "Factory New",
+      "phase": "Phase 3",
+      "description": "It has been painted with black and silver metallic paints using a marbleizing medium, then candy coated.\\n\\n<i>Getting lost in its color can prove fatal</i>"
+    },
+    "is_seller": false,
+    "min_offer_price": 82875,
+    "max_offer_discount": 1500,
+    "is_watchlisted": false,
+    "watchers": 6
+  },
+  {
+    "id": "641685061690853901",
+    "created_at": "2023-11-06T17:07:20.639788Z",
+    "type": "buy_now",
+    "price": 2035,
+    "state": "listed",
+    "seller": {
+      "away": false,
+      "flags": 48,
+      "has_valid_steam_api_key": true,
+      "obfuscated_id": "7472569824607391584",
+      "online": false,
+      "stall_public": false,
+      "statistics": {
+        "median_trade_time": 1677,
+        "total_avoided_trades": 0,
+        "total_failed_trades": 1,
+        "total_trades": 186,
+        "total_verified_trades": 185
+      },
+      "verification_mode": "key"
+    },
+    "reference": {
+      "base_price": 2281,
+      "predicted_price": 2281,
+      "quantity": 58,
+      "last_updated": "2023-11-10T17:01:59.795512Z"
+    },
+    "item": {
+      "asset_id": "32592729725",
+      "def_index": 1209,
+      "sticker_index": 2287,
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXQ9QVcJY8gulRWXk3bSPP_h56EHE59IjtVub68Mjhm3PrETjFD_tuz2tWJwfOmYL3Uzm4FucAj2brDotT021KxrRFqYj-mcYfHdwM7ZliB81aggbC4GRo6qeU",
+      "rarity": 4,
+      "market_hash_name": "Sticker | bodyy (Foil) | Krakow 2017",
+      "tradable": 0,
+      "has_screenshot": false,
+      "is_commodity": true,
+      "type": "sticker",
+      "scm": {
+        "price": 3029,
+        "volume": 0
+      },
+      "rarity_name": "Remarkable",
+      "type_name": "Sticker",
+      "item_name": "bodyy (Foil) | Krakow 2017"
+    },
+    "is_seller": false,
+    "is_watchlisted": false,
+    "watchers": 3
+  },
+  {
+    "id": "643006786961540796",
+    "created_at": "2023-11-10T08:39:24.500364Z",
+    "type": "buy_now",
+    "price": 187000,
+    "state": "listed",
+    "seller": {
+      "avatar": "https://avatars.steamstatic.com/5d127f3ca4dbcbc43c0041aa4f2afcf035216a5f_full.jpg",
+      "away": false,
+      "flags": 48,
+      "has_valid_steam_api_key": true,
+      "online": false,
+      "stall_public": true,
+      "statistics": {
+        "median_trade_time": 1538,
+        "total_avoided_trades": 0,
+        "total_failed_trades": 1,
+        "total_trades": 155,
+        "total_verified_trades": 154
+      },
+      "steam_id": "76561198038579981",
+      "username": "Flashykkk",
+      "verification_mode": "key"
+    },
+    "reference": {
+      "base_price": 201882,
+      "float_factor": 0.99264014,
+      "predicted_price": 200396,
+      "quantity": 144,
+      "last_updated": "2023-11-10T20:39:40.771524Z"
+    },
+    "item": {
+      "asset_id": "34358118302",
+      "def_index": 515,
+      "paint_index": 569,
+      "paint_seed": 453,
+      "float_value": 0.04815292730927467,
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf0ebcZThQ6tCvq4GGqPD1PrbQqW9e-NV9j_v-5YT0m1HllB81NDG3S9rEMFFrf1iC_QXqw7u9h5PqupTKyiNh6ClxtCvczUPmgUtPPbE-1qDISFicAqVXXP7V9p_o84A",
+      "d_param": "14268567850001688181",
+      "is_stattrak": true,
+      "is_souvenir": false,
+      "rarity": 6,
+      "quality": 3,
+      "market_hash_name": "★ StatTrak™ Butterfly Knife | Gamma Doppler (Factory New)",
+      "low_rank": 158,
+      "high_rank": 20,
+      "tradable": 0,
+      "inspect_link": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198038579981A34358118302D14268567850001688181",
+      "has_screenshot": false,
+      "is_commodity": false,
+      "type": "skin",
+      "scm": {
+        "price": 233446,
+        "volume": 0
+      },
+      "rarity_name": "Covert",
+      "type_name": "Skin",
+      "item_name": "★ Butterfly Knife | Gamma Doppler",
+      "wear_name": "Factory New",
+      "phase": "Phase 1",
+      "description": "It has been painted with black and silver metallic paints using a marbleizing medium, then candy coated."
+    },
+    "is_seller": false,
+    "min_offer_price": 177650,
+    "max_offer_discount": 500,
+    "is_watchlisted": false,
+    "watchers": 1
+  },
+  {
+    "id": "643221582671644613",
+    "created_at": "2023-11-10T22:52:55.788721Z",
+    "type": "buy_now",
+    "price": 6,
+    "state": "listed",
+    "seller": {
+      "away": false,
+      "flags": 48,
+      "has_valid_steam_api_key": true,
+      "obfuscated_id": "1643253884885727787",
+      "online": true,
+      "stall_public": false,
+      "statistics": {
+        "median_trade_time": 38,
+        "total_avoided_trades": 0,
+        "total_failed_trades": 0,
+        "total_trades": 2,
+        "total_verified_trades": 2
+      },
+      "verification_mode": "key"
+    },
+    "reference": {
+      "base_price": 8,
+      "float_factor": 1,
+      "predicted_price": 8,
+      "quantity": 16,
+      "last_updated": "2023-11-10T22:50:40.723952Z"
+    },
+    "item": {
+      "asset_id": "34185451625",
+      "def_index": 30,
+      "paint_index": 684,
+      "paint_seed": 931,
+      "float_value": 0.09333710372447968,
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoor-mcjhjxszcdD4b09-klYOAkvPLPKvQmlRd4cJ5ntbN9J7yjRqw_RZlMDryd4WUdwM-NwmFqwK3kuvqhpK97sjIznIy6HYi4n3Zmkewn1gSOdsvfAHj",
+      "d_param": "3380143429761315326",
+      "is_stattrak": false,
+      "is_souvenir": false,
+      "rarity": 3,
+      "quality": 4,
+      "market_hash_name": "Tec-9 | Cracked Opal (Minimal Wear)",
+      "stickers": [
+        {
+          "stickerId": 6700,
+          "slot": 0,
+          "icon_url": "paris2023/mngz.f6c5c395df2f566d5f994f58ef4ee90856584377.png",
+          "name": "Sticker | The MongolZ | Paris 2023",
+          "scm": {
+            "price": 2,
+            "volume": 9535
+          },
+          "reference": {
+            "price": 1,
+            "quantity": 1000,
+            "updated_at": "2023-11-09T00:49:29.687126Z"
+          }
+        },
+        {
+          "stickerId": 6700,
+          "slot": 1,
+          "icon_url": "paris2023/mngz.f6c5c395df2f566d5f994f58ef4ee90856584377.png",
+          "name": "Sticker | The MongolZ | Paris 2023",
+          "scm": {
+            "price": 2,
+            "volume": 9535
+          },
+          "reference": {
+            "price": 1,
+            "quantity": 1000,
+            "updated_at": "2023-11-09T00:49:29.687126Z"
+          }
+        },
+        {
+          "stickerId": 6701,
+          "slot": 2,
+          "icon_url": "paris2023/mngz_glitter.33cbf164a00f3d981c07b5c6a8251269a160c322.png",
+          "name": "Sticker | The MongolZ (Glitter) | Paris 2023",
+          "scm": {
+            "price": 5,
+            "volume": 1461
+          },
+          "reference": {
+            "price": 3,
+            "quantity": 1000,
+            "updated_at": "2023-11-09T00:49:29.687126Z"
+          }
+        },
+        {
+          "stickerId": 6700,
+          "slot": 3,
+          "icon_url": "paris2023/mngz.f6c5c395df2f566d5f994f58ef4ee90856584377.png",
+          "name": "Sticker | The MongolZ | Paris 2023",
+          "scm": {
+            "price": 2,
+            "volume": 9535
+          },
+          "reference": {
+            "price": 1,
+            "quantity": 1000,
+            "updated_at": "2023-11-09T00:49:29.687126Z"
+          }
+        }
+      ],
+      "tradable": 0,
+      "has_screenshot": false,
+      "is_commodity": false,
+      "type": "skin",
+      "scm": {
+        "price": 12,
+        "volume": 15
+      },
+      "rarity_name": "Mil-Spec Grade",
+      "type_name": "Skin",
+      "item_name": "Tec-9 | Cracked Opal",
+      "wear_name": "Minimal Wear",
+      "description": "It has been hand painted to resemble cracked, ancient wood with an underlying opal.\\n\\n<i>Doubles as a mood ring</i>",
+      "collection": "The Spectrum 2 Collection"
+    },
+    "is_seller": false,
+    "is_watchlisted": false,
+    "watchers": 0
+  },
+  {
+    "id": "643221024900515491",
+    "created_at": "2023-11-10T22:50:42.805661Z",
+    "type": "buy_now",
+    "price": 9000,
+    "state": "listed",
+    "seller": {
+      "avatar": "https://avatars.steamstatic.com/36adfe441cb444af6f8ed60054b05682d6026bb4_full.jpg",
+      "away": false,
+      "flags": 560,
+      "has_valid_steam_api_key": false,
+      "online": false,
+      "stall_public": true,
+      "statistics": {
+        "median_trade_time": 567,
+        "total_avoided_trades": 0,
+        "total_failed_trades": 0,
+        "total_trades": 240,
+        "total_verified_trades": 240
+      },
+      "steam_id": "76561198033187192",
+      "username": "Hartkern Eisenmann",
+      "verification_mode": "inventory"
+    },
+    "reference": {
+      "base_price": 8814,
+      "float_factor": 1.2089125,
+      "predicted_price": 10655,
+      "quantity": 119,
+      "last_updated": "2023-11-10T22:50:36.319115Z"
+    },
+    "item": {
+      "asset_id": "34444149914",
+      "def_index": 7,
+      "paint_index": 1141,
+      "paint_seed": 534,
+      "float_value": 0.0007625806028954685,
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09K_k4ifgP7nO4Tdn2xZ_Pp9i_vG8MKliwDh80I-Nmn6INOXIFI5YlqCrwK_ybu90cfovsvOyCBiuiEqtCnfgVXp1iNhGu0F",
+      "d_param": "479156224483393913",
+      "is_stattrak": false,
+      "is_souvenir": false,
+      "rarity": 6,
+      "quality": 4,
+      "market_hash_name": "AK-47 | Nightwish (Factory New)",
+      "low_rank": 70,
+      "tradable": 0,
+      "inspect_link": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198033187192A34444149914D479156224483393913",
+      "has_screenshot": true,
+      "is_commodity": false,
+      "type": "skin",
+      "scm": {
+        "price": 12880,
+        "volume": 1
+      },
+      "rarity_name": "Covert",
+      "type_name": "Skin",
+      "item_name": "AK-47 | Nightwish",
+      "wear_name": "Factory New",
+      "description": "It has been custom painted with a deer and dreamcatchers in neon colors and finished with a pearlescent effect.\\n\\n<i>I've been saving this for a special occasion... – Booth, Arms Dealer</i>",
+      "collection": "The Dreams & Nightmares Collection"
+    },
+    "is_seller": false,
+    "min_offer_price": 13600,
+    "max_offer_discount": 1500,
+    "is_watchlisted": false,
+    "watchers": 0
+  },
+  {
+    "id": "643221862180063381",
+    "created_at": "2023-11-10T22:54:02.428701Z",
+    "type": "buy_now",
+    "price": 39,
+    "state": "listed",
+    "seller": {
+      "avatar": "https://avatars.steamstatic.com/27a0a896497325d3e04749d5d85646bbe8924d85_full.jpg",
+      "away": false,
+      "flags": 48,
+      "has_valid_steam_api_key": true,
+      "online": false,
+      "stall_public": true,
+      "statistics": {
+        "median_trade_time": 1935,
+        "total_avoided_trades": 0,
+        "total_failed_trades": 0,
+        "total_trades": 2127,
+        "total_verified_trades": 2127
+      },
+      "steam_id": "76561198024845342",
+      "username": "Rebornas",
+      "verification_mode": "key"
+    },
+    "reference": {
+      "base_price": 49,
+      "predicted_price": 49,
+      "quantity": 16905,
+      "last_updated": "2023-11-10T22:51:55.757475Z"
+    },
+    "item": {
+      "asset_id": "34367641873",
+      "def_index": 4471,
+      "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFY5naqQIz4R7Yjix9bZkvKiZrmAzzlTu5AoibiT8d_x21Wy8hY_MWz1doSLMlhpM3FKbNs",
+      "rarity": 1,
+      "market_hash_name": "Clutch Case",
+      "tradable": 0,
+      "has_screenshot": false,
+      "is_commodity": true,
+      "type": "container",
+      "scm": {
+        "price": 73,
+        "volume": 20237
+      },
+      "rarity_name": "Base Grade",
+      "type_name": "Container",
+      "item_name": "Clutch Case"
+    },
+    "is_seller": false,
+    "is_watchlisted": false,
+    "watchers": 0
+  }
+]

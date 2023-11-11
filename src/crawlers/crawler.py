@@ -16,7 +16,7 @@ class Crawler:
     def searchItems(self):
         pass
 
-    def createEmbed(self, item) -> discord.Embed:
+    def sendAlerts(self):
         pass
 
     def createBannedEmbed(self) -> discord.Embed:
