@@ -50,7 +50,7 @@ class Csfloat(crawler.Crawler):
                     name = f'{name} | {round(i["item"]["fade"]["percentage"], 2)}%'
                 if "float_value" in i["item"]:
                     floatValue = round(i["item"]["float_value"], 5)
-                if i["item"]["type_name"] != "Sticker" and requests.get(f'{config.betterImageLink}{i["item"]["asset_id"]}-front.png').status_code == 200:
+                if i["item"]["has_screenshot"]:
                     image_link = f'{config.betterImageLink}{i["item"]["asset_id"]}-front.png'
                 if "inspect_link" in i["item"]:
                     inspect_link = "Inspectable (check listing)"
@@ -63,7 +63,7 @@ class Csfloat(crawler.Crawler):
                     color = config.pinkColor
                 elif i["item"]["rarity_name"] == "Restricted":
                     color = config.purpleColor
-                elif i["item"]["rarity_name"] == "Mil-Spec":
+                elif i["item"]["rarity_name"] == "Mil-Spec Grade":
                     color = config.blueColor
                 elif i["item"]["rarity_name"] == "Covert" or i["item"]["rarity_name"] == "Extraordinary":
                     color = config.redColor
