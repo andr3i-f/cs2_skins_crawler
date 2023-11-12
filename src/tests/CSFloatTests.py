@@ -28,7 +28,7 @@ correctItemsList = [
               "Inspectable (check listing)",
               3,
               0xffe100,
-              "Factory New"),
+              "N/A"),
     item.Item("Sticker | bodyy (Foil) | Krakow 2017",
               20.35,
               10.8,
@@ -50,7 +50,7 @@ correctItemsList = [
               "Inspectable (check listing)",
               1,
               0xffe100,
-              "Factory New"),
+              "N/A"),
     item.Item("Tec-9 | Cracked Opal (Minimal Wear)",
               0.06,
               25,
@@ -61,7 +61,7 @@ correctItemsList = [
               "N/A",
               0,
               0x0026ff,
-              "Minimal Wear"),
+              "[The Spectrum 2 Collection](https://csgoskins.gg/collections/the-spectrum-2-collection)"),
     item.Item("AK-47 | Nightwish (Factory New)",
               90,
               15.5,
@@ -72,7 +72,7 @@ correctItemsList = [
               "Inspectable (check listing)",
               0,
               0xff0000,
-              "Factory New"),
+              "[The Dreams & Nightmares Collection](https://csgoskins.gg/collections/the-dreams-nightmares-collection)"),
     item.Item("Clutch Case",
               0.39,
               20.4,
@@ -95,7 +95,7 @@ class TestCSFloatMethods(unittest.TestCase):
         x = 0
         for i in listToCheck:
             self.assertEqual(i.name, correctItemsList[x].name, f"Names not equal - index {x}")
-            self.assertEqual(i.wear_name, correctItemsList[x].wear_name, f"Wear names not equal - index {x}")
+            self.assertEqual(i.collection, correctItemsList[x].collection, f"Wear names not equal - index {x}")
             self.assertEqual(i.float, correctItemsList[x].float, f"Float values not equal - index {x}")
             self.assertEqual(i.price, correctItemsList[x].price, f"Price values not equal - index {x}")
             self.assertEqual(i.discount, correctItemsList[x].discount, f"Discount values not equal - index {x}")

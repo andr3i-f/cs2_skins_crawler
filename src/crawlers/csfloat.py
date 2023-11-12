@@ -36,7 +36,7 @@ class Csfloat(crawler.Crawler):
                 price = round(i["price"] * 0.01, 2)
                 discount = round((1 - (i["price"] / i["reference"]["predicted_price"])) * 100, 1)
                 floatValue = "N/A"
-                wear = "N/A"
+                collection = "N/A"
                 image_link = f'{config.imageLink}{i["item"]["icon_url"]}'
                 id = i["id"]
                 link = f'{config.itemLink}{i["id"]}'
@@ -54,8 +54,8 @@ class Csfloat(crawler.Crawler):
                     image_link = f'{config.betterImageLink}{i["item"]["asset_id"]}-front.png'
                 if "inspect_link" in i["item"]:
                     inspect_link = "Inspectable (check listing)"
-                if "wear_name" in i["item"]:
-                    wear = i["item"]["wear_name"]
+                if "collection" in i["item"]:
+                    collection = f'[{i["item"]["collection"]}]({config.collectionLink}{i["item"]["collection"].lower().replace(".", "").replace("& ","").replace(" ", "-")})'
 
                 if name.find("★") != -1:
                     color = config.yellowColor
@@ -70,7 +70,7 @@ class Csfloat(crawler.Crawler):
                 else:
                     color = config.blackColor
 
-                currentItem = item.Item(name, price, discount, floatValue, image_link, id, link, inspect_link, watchers, color, wear)
+                currentItem = item.Item(name, price, discount, floatValue, image_link, id, link, inspect_link, watchers, color, collection)
                 if currentItem.id not in self.notifiedItems or (currentItem.id in self.notifiedItems and currentItem.price < self.notifiedItems[currentItem.id]):
                     self.items.append(currentItem)
 
