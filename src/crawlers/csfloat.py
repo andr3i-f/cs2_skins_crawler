@@ -41,7 +41,7 @@ class Csfloat(crawler.Crawler):
                 id = i["id"]
                 link = f'{config.itemLink}{i["id"]}'
                 inspect_link = "N/A"
-                watchers = i["watchers"]
+                patternID = "N/A"
                 color = 0
 
                 if "phase" in i["item"]:
@@ -56,6 +56,8 @@ class Csfloat(crawler.Crawler):
                     inspect_link = "Inspectable (check listing)"
                 if "collection" in i["item"]:
                     collection = f'[{i["item"]["collection"]}]({config.collectionLink}{i["item"]["collection"].lower().replace(".", "").replace("& ","").replace(" ", "-")})'
+                if "paint_seed" in i["item"]:
+                    patternID = i["item"]["paint_seed"]
 
                 if name.find("★") != -1:
                     color = config.yellowColor
@@ -70,7 +72,7 @@ class Csfloat(crawler.Crawler):
                 else:
                     color = config.blackColor
 
-                currentItem = item.Item(name, price, discount, floatValue, image_link, id, link, inspect_link, watchers, color, collection)
+                currentItem = item.Item(name, price, discount, floatValue, image_link, id, link, inspect_link, patternID, color, collection)
                 if currentItem.id not in self.notifiedItems or (currentItem.id in self.notifiedItems and currentItem.price < self.notifiedItems[currentItem.id]):
                     self.items.append(currentItem)
 

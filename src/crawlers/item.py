@@ -1,7 +1,7 @@
 import discord
 
 class Item:
-    def __init__(self, name, price, discount, floatValue, image_link, id, link, inspect_link, watchers, color, collection):
+    def __init__(self, name, price, discount, floatValue, image_link, id, link, inspect_link, patternID, color, collection):
         self.name = name
         self.collection = collection
         self.float = floatValue
@@ -10,7 +10,7 @@ class Item:
         self.image_link = image_link
         self.inspect_link = inspect_link
         self.color = color
-        self.watchers = watchers
+        self.patternID = patternID
         self.link = link
         self.id = id
 
@@ -19,11 +19,11 @@ class Item:
 
         embed.set_image(url=self.image_link)
         embed.add_field(name="Price", value=f'${self.price}', inline=True)
-        embed.add_field(name="Discount", value=f'{self.discount}%', inline=True)
-        embed.add_field(name="Collection", value=f'{self.collection}', inline=True)
         embed.add_field(name="Float", value=self.float, inline=True)
+        embed.add_field(name="Collection", value=f'{self.collection}', inline=True)
+        embed.add_field(name="Discount", value=f'{self.discount}%', inline=True)
+        embed.add_field(name="Pattern", value=self.patternID, inline=True)
         embed.add_field(name="Inspect", value=self.inspect_link, inline=True)
-        embed.add_field(name="Watchers", value=self.watchers, inline=True)
 
         embed.set_footer(text="CSFloat Crawler by endrei")
 

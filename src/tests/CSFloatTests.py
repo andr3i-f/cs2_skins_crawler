@@ -26,7 +26,7 @@ correctItemsList = [
               "641299126818049306",
               "https://csfloat.com/item/641299126818049306",
               "Inspectable (check listing)",
-              3,
+              630,
               0xffe100,
               "N/A"),
     item.Item("Sticker | bodyy (Foil) | Krakow 2017",
@@ -37,7 +37,7 @@ correctItemsList = [
               "641685061690853901",
               "https://csfloat.com/item/641685061690853901",
               "N/A",
-              3,
+              "N/A",
               0x000000,
               "N/A"),
     item.Item("★ StatTrak™ Butterfly Knife | Gamma Doppler (Factory New) | Phase 1",
@@ -48,7 +48,7 @@ correctItemsList = [
               "643006786961540796",
               "https://csfloat.com/item/643006786961540796",
               "Inspectable (check listing)",
-              1,
+              453,
               0xffe100,
               "N/A"),
     item.Item("Tec-9 | Cracked Opal (Minimal Wear)",
@@ -59,7 +59,7 @@ correctItemsList = [
               "643221582671644613",
               "https://csfloat.com/item/643221582671644613",
               "N/A",
-              0,
+              931,
               0x0026ff,
               "[The Spectrum 2 Collection](https://csgoskins.gg/collections/the-spectrum-2-collection)"),
     item.Item("AK-47 | Nightwish (Factory New)",
@@ -70,7 +70,7 @@ correctItemsList = [
               "643221024900515491",
               "https://csfloat.com/item/643221024900515491",
               "Inspectable (check listing)",
-              0,
+              534,
               0xff0000,
               "[The Dreams & Nightmares Collection](https://csgoskins.gg/collections/the-dreams-nightmares-collection)"),
     item.Item("Clutch Case",
@@ -81,7 +81,7 @@ correctItemsList = [
               "643221862180063381",
               "https://csfloat.com/item/643221862180063381",
               "N/A",
-              0,
+              "N/A",
               0x000000,
               "N/A")
     ]
@@ -102,7 +102,7 @@ class TestCSFloatMethods(unittest.TestCase):
             self.assertEqual(i.image_link, correctItemsList[x].image_link, f"Image links not equal - index {x}")
             self.assertEqual(i.inspect_link, correctItemsList[x].inspect_link, f"Inspect links not equal - index {x}")
             self.assertEqual(i.color, correctItemsList[x].color, f"Color values not equal - index {x}")
-            self.assertEqual(i.watchers, correctItemsList[x].watchers, f"Watchers value not equal - index {x}")
+            self.assertEqual(i.patternID, correctItemsList[x].patternID, f"Watchers value not equal - index {x}")
             self.assertEqual(i.link, correctItemsList[x].link, f"Link not equal - index {x}")
             self.assertEqual(i.id, correctItemsList[x].id, f"ID not equal - index {x}")
             x += 1
