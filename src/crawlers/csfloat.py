@@ -30,7 +30,7 @@ class Csfloat(crawler.Crawler):
     def searchItems(self, data) -> list:
         self.items.clear()
         for i in data:
-            if (1 - (i["price"] / i["reference"]["predicted_price"])) > 0:
+            if (1 - (i["price"] / i["reference"]["predicted_price"])) > 0.01:
 
                 name = i["item"]["market_hash_name"]
                 price = round(i["price"] * 0.01, 2)
