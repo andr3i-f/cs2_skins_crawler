@@ -8,7 +8,9 @@ class Crawler:
         self.notifiedItems = {} # Stores an ID : price
         self.blocked = False
         self.notifier = notifier
+        self.monitor_name = "default"
 
+        self.amountOfTimesBanned = 0
         self.timeoutTimer = config.timeoutTimer 
         self.delay = config.delay
         self.firstPass = True
@@ -20,7 +22,6 @@ class Crawler:
         pass
 
     def createBannedEmbed(self) -> discord.Embed:
-        embed = discord.Embed(title="BONKED")
-        embed.set_image(url="https://pbs.twimg.com/media/FiGpEeVWIAAKP2Y.jpg")
-
+        embed = discord.Embed(title=f"Banned from: {self.monitor_name}")
+        embed.add_field(name="Waiting until next try (seconds)", value=(self.amountOfTimesBanned * 60 + self.timeoutTimer))
         return embed

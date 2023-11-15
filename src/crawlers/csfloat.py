@@ -10,6 +10,7 @@ class Csfloat(crawler.Crawler):
     def __init__(self, link, notifier):
         crawler.Crawler.__init__(self, link, notifier)
         self.links = [config.highestDiscountLink, config.newItemsLink]
+        self.monitor_name = "CSFloat"
 
     def runCrawler(self):
         for link in self.links:
@@ -18,10 +19,11 @@ class Csfloat(crawler.Crawler):
             
             if data.status_code != 200:
                 self.notifier.sendMonitorUpdate(self.createBannedEmbed())
-                print("bonked, sleeping for 5 minutes")
-                time.sleep(self.timeoutTimer)
+                time.sleep((60 * self.amountOfTimesBanned + self.timeoutTimer))
+                self.amountOfTimesBanned += 1
             
             else:
+                self.amountOfTimesBanned = 0
                 data = data.json()
                 self.searchItems(data)
         
