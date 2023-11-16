@@ -88,7 +88,7 @@ class Csfloat(crawler.Crawler):
 
     def sendAlerts(self):
         for item in self.items:
-            if not self.firstPass:
+            if self.firstPass:
                 if item.float == "N/A":
                     self.notifier.sendMessage(item.createEmbed(), 1)
                 elif item.float != "N/A":

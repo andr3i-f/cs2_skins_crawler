@@ -3,6 +3,7 @@ from tests import CSFloatTests
 import unittest
 import notify
 import config
+import DiscordBot
 
 '''
 If there are multiple bots (i.e. skinfloat, csfloat) implement multithreading
@@ -21,5 +22,6 @@ def main():
 
     while True:
         csfloatBot.runCrawler()
+
 
 main()
