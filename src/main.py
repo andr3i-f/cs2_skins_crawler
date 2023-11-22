@@ -1,4 +1,5 @@
 from crawlers import csfloat
+from crawlers import skinbid
 from tests import CSFloatTests
 import unittest
 import notify
@@ -17,11 +18,12 @@ def tests():
 def main():
     notifyBot = notify.Notify()
     csfloatBot = csfloat.Csfloat(config.highestDiscountLink, notifyBot)
+    skinbidBot = skinbid.Skinbid(config.skinbidItemsLink, notifyBot)
 
     #tests()
 
     while True:
-        csfloatBot.runCrawler()
+        skinbidBot.runCrawler()
 
 
 main()

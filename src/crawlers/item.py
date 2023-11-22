@@ -1,7 +1,7 @@
 import discord
 
 class Item:
-    def __init__(self, name, price, discount, floatValue, image_link, id, link, inspect_link, patternID, color, collection):
+    def __init__(self, name, price, discount, floatValue, image_link, id, link, inspect_link, patternID, color, collection, isSkin):
         self.name = name
         self.collection = collection
         self.float = floatValue
@@ -13,8 +13,9 @@ class Item:
         self.patternID = patternID
         self.link = link
         self.id = id
+        self.isSkin = isSkin
 
-    def createEmbed(self) -> discord.Embed:
+    def createEmbed(self, website) -> discord.Embed:
         embed = discord.Embed(title=self.name, url=self.link, color=self.color)
 
         embed.set_image(url=self.image_link)
@@ -25,6 +26,6 @@ class Item:
         embed.add_field(name="Pattern", value=self.patternID, inline=True)
         embed.add_field(name="Inspect", value=self.inspect_link, inline=True)
 
-        embed.set_footer(text="CSFloat Crawler by endrei")
+        embed.set_footer(text=f"{website} Crawler by endrei")
 
         return embed

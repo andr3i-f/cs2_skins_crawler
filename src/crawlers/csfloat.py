@@ -45,6 +45,7 @@ class Csfloat(crawler.Crawler):
                 inspect_link = "N/A"
                 patternID = "N/A"
                 color = 0
+                isSkin = False
 
                 if "phase" in i["item"]:
                     name = f'{name} | {i["item"]["phase"]}'
@@ -52,6 +53,7 @@ class Csfloat(crawler.Crawler):
                     name = f'{name} | {round(i["item"]["fade"]["percentage"], 2)}%'
                 if "float_value" in i["item"]:
                     floatValue = round(i["item"]["float_value"], 5)
+                    isSkin = True
                 if i["item"]["has_screenshot"]:
                     image_link = f'{config.betterImageLink}{i["item"]["asset_id"]}-front.png'
                 if "inspect_link" in i["item"]:
@@ -74,7 +76,7 @@ class Csfloat(crawler.Crawler):
                 else:
                     color = config.blackColor
 
-                currentItem = item.Item(name, price, discount, floatValue, image_link, id, link, inspect_link, patternID, color, collection)
+                currentItem = item.Item(name, price, discount, floatValue, image_link, id, link, inspect_link, patternID, color, collection, isSkin)
                 if currentItem.id not in self.notifiedItems or (currentItem.id in self.notifiedItems and currentItem.price < self.notifiedItems[currentItem.id]):
                     self.items.append(currentItem)
 
@@ -89,9 +91,6 @@ class Csfloat(crawler.Crawler):
     def sendAlerts(self):
         for item in self.items:
             if not self.firstPass:
-                if item.float == "N/A":
-                    self.notifier.sendMessage(item.createEmbed(), 1)
-                elif item.float != "N/A":
-                    self.notifier.sendMessage(item.createEmbed(), 0)
+                self.notifier.sendMessage(item.createEmbed("CSFloat"), item.isSkin)
 
             self.notifiedItems[item.id] = item.price
