@@ -11,18 +11,21 @@ class Skinbid(crawler.Crawler):
         crawler.Crawler.__init__(self, link, notifier)
     
     def runCrawler(self):
-        headers = {"User-Agent" : random.choice(user_agents.agents)}
-        data = requests.get(self.link, headers=headers)
+        while True:
+            headers = {"User-Agent" : random.choice(user_agents.agents)}
+            data = requests.get(self.link, headers=headers)
 
-        if data.status_code != 200:
-            self.notifier.sendMonitorUpdate(self.createBannedEmbed())
-            time.sleep((60 * self.amountOfTimesBanned + self.timeoutTimer))
-            self.amountOfTimesBanned += 1
+            if data.status_code != 200:
+                self.notifier.sendMonitorUpdate(self.createBannedEmbed())
+                time.sleep((60 * self.amountOfTimesBanned + self.timeoutTimer))
+                self.amountOfTimesBanned += 1
 
-        else:
-            self.amountOfTimesBanned = 0
-            data = data.json()
-            self.searchItems(data)
+            else:
+                self.amountOfTimesBanned = 0
+                data = data.json()
+                self.searchItems(data)
+            
+            time.sleep(self.delay)
     
     def searchItems(self, data) -> list:
         self.items.clear()
@@ -84,7 +87,7 @@ class Skinbid(crawler.Crawler):
         
     def sendAlerts(self):
         for item in self.items:
-            if self.firstPass:
+            if not self.firstPass:
                 self.notifier.sendMessage(item.createEmbed("Skinbid"), item.isSkin)
             
             self.notifiedItems[item.id] = item.price

@@ -5,6 +5,7 @@ import unittest
 import notify
 import config
 import DiscordBot
+import threading
 
 '''
 If there are multiple bots (i.e. skinfloat, csfloat) implement multithreading
@@ -20,10 +21,19 @@ def main():
     csfloatBot = csfloat.Csfloat(config.highestDiscountLink, notifyBot)
     skinbidBot = skinbid.Skinbid(config.skinbidItemsLink, notifyBot)
 
-    #tests()
+    csfloatThread = threading.Thread(target=csfloatBot.runCrawler)
+    skinbidThread = threading.Thread(target=skinbidBot.runCrawler)
 
-    while True:
-        skinbidBot.runCrawler()
+    csfloatThread.daemon = True
+    skinbidThread.daemon = True
+
+    #tests()
+    #csfloatBot.runCrawler()
+    csfloatThread.start()
+    skinbidThread.start()
+
+    csfloatThread.join()
+    skinbidThread.join()
 
 
 main()

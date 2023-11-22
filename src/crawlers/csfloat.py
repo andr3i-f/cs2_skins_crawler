@@ -13,21 +13,22 @@ class Csfloat(crawler.Crawler):
         self.monitor_name = "CSFloat"
 
     def runCrawler(self):
-        for link in self.links:
-            headers = { "User-Agent" : random.choice(user_agents.agents)}
-            data = requests.get(link, headers=headers)
+        while True:
+            for link in self.links:
+                headers = { "User-Agent" : random.choice(user_agents.agents)}
+                data = requests.get(link, headers=headers)
+                
+                if data.status_code != 200:
+                    self.notifier.sendMonitorUpdate(self.createBannedEmbed())
+                    time.sleep((60 * self.amountOfTimesBanned + self.timeoutTimer))
+                    self.amountOfTimesBanned += 1
+                
+                else:
+                    self.amountOfTimesBanned = 0
+                    data = data.json()
+                    self.searchItems(data)
             
-            if data.status_code != 200:
-                self.notifier.sendMonitorUpdate(self.createBannedEmbed())
-                time.sleep((60 * self.amountOfTimesBanned + self.timeoutTimer))
-                self.amountOfTimesBanned += 1
-            
-            else:
-                self.amountOfTimesBanned = 0
-                data = data.json()
-                self.searchItems(data)
-        
-            time.sleep(self.delay)
+                time.sleep(self.delay)
 
     def searchItems(self, data) -> list:
         self.items.clear()
