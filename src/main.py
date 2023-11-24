@@ -19,7 +19,7 @@ def main():
 
     while True:
         if x == "1":
-            #csfloatThread.start()
+            csfloatThread.start()
             skinbidThread.start()
             x = "0"
 
