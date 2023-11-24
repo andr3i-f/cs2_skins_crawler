@@ -26,6 +26,6 @@ class Item:
         embed.add_field(name="Pattern", value=self.patternID, inline=True)
         embed.add_field(name="Inspect", value=self.inspect_link, inline=True)
 
-        embed.set_footer(text=f"{website} Crawler by endrei")
+        embed.set_footer(text=f"{website} Crawler")
 
         return embed
