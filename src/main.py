@@ -27,13 +27,14 @@ def main():
     csfloatThread.daemon = True
     skinbidThread.daemon = True
 
-    #tests()
-    #csfloatBot.runCrawler()
-    csfloatThread.start()
-    skinbidThread.start()
+    x = "1"
 
-    csfloatThread.join()
-    skinbidThread.join()
+    while True:
+        if x == "1":
+            csfloatThread.start()
+            skinbidThread.start()
+            x = "0"
+
 
 
 main()

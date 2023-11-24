@@ -12,6 +12,7 @@ class Skinbid(crawler.Crawler):
     
     def runCrawler(self):
         while True:
+            print("running skinbid")
             headers = {"User-Agent" : random.choice(user_agents.agents)}
             data = requests.get(self.link, headers=headers)
 
