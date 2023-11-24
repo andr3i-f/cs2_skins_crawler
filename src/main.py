@@ -6,7 +6,7 @@ import threading
 
 def main():
     notifyBot = notify.Notify()
-    csfloatBot = csfloat.Csfloat(config.highestDiscountLink, notifyBot)
+    csfloatBot = csfloat.Csfloat(config.csfloatHighestDiscountLink, notifyBot)
     skinbidBot = skinbid.Skinbid(config.skinbidItemsLink, notifyBot)
 
     csfloatThread = threading.Thread(target=csfloatBot.runCrawler)
@@ -19,7 +19,7 @@ def main():
 
     while True:
         if x == "1":
-            csfloatThread.start()
+            #csfloatThread.start()
             skinbidThread.start()
             x = "0"
 

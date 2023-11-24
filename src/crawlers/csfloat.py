@@ -9,7 +9,7 @@ import time
 class Csfloat(crawler.Crawler):
     def __init__(self, link, notifier):
         crawler.Crawler.__init__(self, link, notifier)
-        self.links = [config.highestDiscountLink, config.newItemsLink]
+        self.links = [config.csfloatHighestDiscountLink, config.csfloatNewItemsLink]
         self.monitor_name = "CSFloat"
 
     def runCrawler(self):
@@ -40,9 +40,9 @@ class Csfloat(crawler.Crawler):
                 discount = round((1 - (i["price"] / i["reference"]["predicted_price"])) * 100, 1)
                 floatValue = "N/A"
                 collection = "N/A"
-                image_link = f'{config.imageLink}{i["item"]["icon_url"]}'
+                image_link = f'{config.steamImageLink}{i["item"]["icon_url"]}'
                 id = i["id"]
-                link = f'{config.itemLink}{i["id"]}'
+                link = f'{config.csfloatItemLink}{i["id"]}'
                 inspect_link = "N/A"
                 patternID = "N/A"
                 color = 0
@@ -56,7 +56,7 @@ class Csfloat(crawler.Crawler):
                     floatValue = round(i["item"]["float_value"], 5)
                     isSkin = True
                 if i["item"]["has_screenshot"]:
-                    image_link = f'{config.betterImageLink}{i["item"]["asset_id"]}-front.png'
+                    image_link = f'{config.csfloatBetterImageLink}{i["item"]["asset_id"]}-front.png'
                 if "inspect_link" in i["item"]:
                     inspect_link = "Inspectable (check listing)"
                 if "collection" in i["item"]:

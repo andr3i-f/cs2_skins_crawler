@@ -3,7 +3,7 @@ import discord
 
 class Notify:
     def __init__(self):
-        self.webhook = discord.SyncWebhook.from_url(secret.webhook)
+        self.webhook = discord.SyncWebhook.from_url(secret.skinsWebhook)
         self.stickerWebhook = discord.SyncWebhook.from_url(secret.stickerWebhook)
         self.updateWebhook = discord.SyncWebhook.from_url(secret.updateWebhook)
 
