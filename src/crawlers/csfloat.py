@@ -14,7 +14,6 @@ class Csfloat(crawler.Crawler):
 
     def runCrawler(self):
         while True:
-            print("running csfloat")
             for link in self.links:
                 headers = { "User-Agent" : random.choice(user_agents.agents)}
                 data = requests.get(link, headers=headers)

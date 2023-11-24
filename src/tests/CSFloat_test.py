@@ -93,22 +93,22 @@ correctItemsList = [
     ]
 
 
-class TestCSFloatMethods(unittest.TestCase):
-    def test_searchItems(self):
-        csfloatCrawler = csfloat.Csfloat("N/A", "N/A")
-        listToCheck = csfloatCrawler.searchItems(data)
+def test_CSFloat():
+    csfloatCrawler = csfloat.Csfloat("N/A", "N/A")
+    listToCheck = csfloatCrawler.searchItems(data)
 
-        x = 0
-        for i in listToCheck:
-            self.assertEqual(i.name, correctItemsList[x].name, f"Names not equal - index {x}")
-            self.assertEqual(i.collection, correctItemsList[x].collection, f"Wear names not equal - index {x}")
-            self.assertEqual(i.float, correctItemsList[x].float, f"Float values not equal - index {x}")
-            self.assertEqual(i.price, correctItemsList[x].price, f"Price values not equal - index {x}")
-            self.assertEqual(i.discount, correctItemsList[x].discount, f"Discount values not equal - index {x}")
-            self.assertEqual(i.image_link, correctItemsList[x].image_link, f"Image links not equal - index {x}")
-            self.assertEqual(i.inspect_link, correctItemsList[x].inspect_link, f"Inspect links not equal - index {x}")
-            self.assertEqual(i.color, correctItemsList[x].color, f"Color values not equal - index {x}")
-            self.assertEqual(i.patternID, correctItemsList[x].patternID, f"Watchers value not equal - index {x}")
-            self.assertEqual(i.link, correctItemsList[x].link, f"Link not equal - index {x}")
-            self.assertEqual(i.id, correctItemsList[x].id, f"ID not equal - index {x}")
-            x += 1
+    x = 0
+    for i in listToCheck:
+        assert i.name == correctItemsList[x].name
+        assert i.collection == correctItemsList[x].collection
+        assert i.float == correctItemsList[x].float
+        assert i.price == correctItemsList[x].price
+        assert i.discount == correctItemsList[x].discount
+        assert i.image_link == correctItemsList[x].image_link
+        assert i.inspect_link == correctItemsList[x].inspect_link
+        assert i.color == correctItemsList[x].color
+        assert i.patternID == correctItemsList[x].patternID
+        assert i.link == correctItemsList[x].link
+        assert i.id == correctItemsList[x].id
+        assert i.isSkin == correctItemsList[x].isSkin
+        x += 1
