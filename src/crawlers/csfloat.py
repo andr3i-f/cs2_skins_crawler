@@ -40,13 +40,14 @@ class Csfloat(crawler.Crawler):
                 discount = round((1 - (i["price"] / i["reference"]["predicted_price"])) * 100, 1)
                 floatValue = "N/A"
                 collection = "N/A"
-                image_link = f'{config.steamImageLink}{i["item"]["icon_url"]}'
+                imageLink = f'{config.steamImageLink}{i["item"]["icon_url"]}'
                 id = i["id"]
                 link = f'{config.csfloatItemLink}{i["id"]}'
-                inspect_link = "N/A"
+                inspectLink = "N/A"
                 patternID = "N/A"
                 color = 0
                 isSkin = False
+                rarityName = i["item"]["rarity_name"]
 
                 if "phase" in i["item"]:
                     name = f'{name} | {i["item"]["phase"]}'
@@ -56,9 +57,9 @@ class Csfloat(crawler.Crawler):
                     floatValue = round(i["item"]["float_value"], 5)
                     isSkin = True
                 if i["item"]["has_screenshot"]:
-                    image_link = f'{config.csfloatBetterImageLink}{i["item"]["asset_id"]}-front.png'
+                    imageLink = f'{config.csfloatBetterImageLink}{i["item"]["asset_id"]}-front.png'
                 if "inspect_link" in i["item"]:
-                    inspect_link = "Inspectable (check listing)"
+                    inspectLink = "Inspectable (check listing)"
                 if "collection" in i["item"]:
                     collection = f'[{i["item"]["collection"]}]({config.collectionLink}{i["item"]["collection"].lower().replace(".", "").replace("& ","").replace(" ", "-")})'
                 if "paint_seed" in i["item"]:
@@ -66,18 +67,18 @@ class Csfloat(crawler.Crawler):
 
                 if name.find("★") != -1:
                     color = config.yellowColor
-                elif i["item"]["rarity_name"] == "Exotic" or i["item"]["rarity_name"] == "Classified":
+                elif rarityName == "Exotic" or rarityName == "Classified":
                     color = config.pinkColor
-                elif i["item"]["rarity_name"] == "Restricted":
+                elif rarityName == "Restricted":
                     color = config.purpleColor
-                elif i["item"]["rarity_name"] == "Mil-Spec Grade":
+                elif rarityName == "Mil-Spec Grade":
                     color = config.blueColor
-                elif i["item"]["rarity_name"] == "Covert" or i["item"]["rarity_name"] == "Extraordinary":
+                elif rarityName == "Covert" or rarityName == "Extraordinary":
                     color = config.redColor
                 else:
                     color = config.blackColor
 
-                currentItem = item.Item(name, price, discount, floatValue, image_link, id, link, inspect_link, patternID, color, collection, isSkin)
+                currentItem = item.Item(name, price, discount, floatValue, imageLink, id, link, inspectLink, patternID, color, collection, isSkin)
                 if currentItem.id not in self.notifiedItems or (currentItem.id in self.notifiedItems and currentItem.price < self.notifiedItems[currentItem.id]):
                     self.items.append(currentItem)
 

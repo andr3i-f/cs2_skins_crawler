@@ -35,30 +35,32 @@ class Skinbid(crawler.Crawler):
 
             isSkin = False
             id = i["auction"]["auctionHash"]
-            name = i["items"][0]["item"]["fullName"]
             price = i["nextMinimumBid"]
             discount = i["items"][0]["discount"]
             floatValue = "N/A"
-            image_link = i["items"][0]["item"]["imageUrl"]
             patternID = "N/A"
-            inspect_link = "N/A"
+            inspectLink = "N/A"
             collection = "N/A - not provided"
             link = f'{config.skinbidLink}{id}'
-            rarity = i["items"][0]["item"]["rarity"]
 
-            dopplerPhase = i["items"][0]["item"]["dopplerPhase"]
-            fade = i["items"][0]["item"]["fade"]
+            i = i["items"][0]["item"]
+
+            name = i["fullName"]
+            imageLink = i["imageUrl"]
+            rarity = i["rarity"]
+            dopplerPhase = i["dopplerPhase"]
+            fade = i["fade"]
 
             if dopplerPhase:
                 name = f"{name} | {dopplerPhase}"
             if fade != 0:
                 name = f"{name} | {fade}%"
-            if i["items"][0]["item"]["inspectLink"]:
+            if i["inspectLink"]:
                 inspect_link = "Inspectable (check listing)"
-            if i["items"][0]["item"]["paintSeed"] != 0:
-                patternID = i["items"][0]["item"]["paintSeed"]
-            if i["items"][0]["item"]["float"]:
-                floatValue = i["items"][0]["item"]["float"]
+            if i["paintSeed"] != 0:
+                patternID = i["paintSeed"]
+            if i["float"]:
+                floatValue = i["float"]
                 isSkin = True
 
             if name.find("★") != -1:
@@ -74,7 +76,7 @@ class Skinbid(crawler.Crawler):
             else:
                 color = config.blackColor
             
-            currentItem = item.Item(name, price, discount, floatValue, image_link, id, link, inspect_link, patternID, color, collection, isSkin)
+            currentItem = item.Item(name, price, discount, floatValue, imageLink, id, link, inspectLink, patternID, color, collection, isSkin)
             if currentItem.id not in self.notifiedItems or (currentItem.id in self.notifiedItems and currentItem.price < self.notifiedItems[currentItem.id]):
                 self.items.append(currentItem)
 
