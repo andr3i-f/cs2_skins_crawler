@@ -56,11 +56,11 @@ class Skinbid(crawler.Crawler):
             if fade != 0:
                 name = f"{name} | {fade}%"
             if i["inspectLink"]:
-                inspect_link = "Inspectable (check listing)"
+                inspectLink = "Inspectable (check listing)"
             if i["paintSeed"] != 0:
                 patternID = i["paintSeed"]
             if i["float"]:
-                floatValue = i["float"]
+                floatValue = round(i["float"], 5)
                 isSkin = True
 
             if name.find("★") != -1:
@@ -86,6 +86,7 @@ class Skinbid(crawler.Crawler):
         if self.firstPass:
             self.firstPass = False
 
+        return self.items
         
     def sendAlerts(self):
         for item in self.items:

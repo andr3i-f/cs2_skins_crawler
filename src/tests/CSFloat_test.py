@@ -1,4 +1,3 @@
-import unittest
 import json
 from crawlers import csfloat, item
 
@@ -104,8 +103,8 @@ def test_CSFloat():
         assert i.float == correctItemsList[x].float
         assert i.price == correctItemsList[x].price
         assert i.discount == correctItemsList[x].discount
-        assert i.image_link == correctItemsList[x].image_link
-        assert i.inspect_link == correctItemsList[x].inspect_link
+        assert i.imageLink == correctItemsList[x].imageLink
+        assert i.inspectLink == correctItemsList[x].inspectLink
         assert i.color == correctItemsList[x].color
         assert i.patternID == correctItemsList[x].patternID
         assert i.link == correctItemsList[x].link
