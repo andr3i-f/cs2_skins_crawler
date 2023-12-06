@@ -91,6 +91,6 @@ class Skinbid(crawler.Crawler):
     def sendAlerts(self):
         for item in self.items:
             if not self.firstPass:
-                self.notifier.sendMessage(item.createEmbed("Skinbid"), item.isSkin)
+                self.notifier.sendMessage(item.createEmbed("Skinbid"), item.isSkin, item.discount)
             
             self.notifiedItems[item.id] = item.price
