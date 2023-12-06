@@ -2,12 +2,19 @@
 Monitors CS2 skin marketplaces for good discounts and notifies via Discord webhooks.
 
 # Discord Link to [Skin Alert](https://discord.gg/uMHSyhzMNU)
-- For Skin Alert, the program is being ran off my Raspberry Pi
+- Skin Alert is a discord community I made that uses this program! Feel free to join :)
+- For Skin Alert, the program is being ran off my Raspberry Pi - hopefully switching to a VPS
 - You can contact me if any questions you might have in the Discord or Github
 
 # Current CS2 Marketplaces Monitored
 - csfloat
 - skinbid
+
+# Future Plans
+- Utilize docker
+- Incorporate a default marketplace to compare discounts to (i.e. buff163)
+- Incorporate more marketplaces
+- Ability to interact with a Discord bot to create a private channel which will update with skins the user wants
 
 # How to run the program
 1. Copy the repo
