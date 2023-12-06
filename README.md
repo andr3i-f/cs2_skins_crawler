@@ -14,7 +14,7 @@ Monitors CS2 skin marketplaces for good discounts and notifies via Discord webho
 - Utilize docker
 - Incorporate a default marketplace to compare discounts to (i.e. buff163)
 - Incorporate more marketplaces
-- Ability to interact with a Discord bot to create a private channel which will update with skins the user wants
+- Ability to interact with a Discord bot to create a private channel which will only update with wanted skins
 
 # How to run the program
 1. Copy the repo
@@ -23,7 +23,11 @@ Monitors CS2 skin marketplaces for good discounts and notifies via Discord webho
    - pip install requests
    - pip install pytest
 3. Create "secret.py" in "src" directory and implement the following inside:
-   - skinsWebhook = "https://discord.com/api/webhooks/examplewebhook"
+   - twentyfivePercentWebhook = "https://discord.com/api/webhooks/examplewebhook"
+   - twentyPercentWebhook = "https://discord.com/api/webhooks/examplewebhook"
+   - fifteenPercentWebhook = "https://discord.com/api/webhooks/examplewebhook"
+   - tenPercentWebhook = "https://discord.com/api/webhooks/examplewebhook"
+   - onePercentWebhook = "https://discord.com/api/webhooks/examplewebhook"
    - stickerWebhook = "https://discord.com/api/webhooks/examplewebhook"
    - updateWebhook = "https://discord.com/api/webhooks/examplewebhook"
    - bot_token = "BotTokenExample"
