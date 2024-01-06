@@ -23,11 +23,10 @@ Monitors CS2 skin marketplaces for good discounts and notifies via Discord webho
    - pip install requests
    - pip install pytest
 3. Create "secret.py" in "src" directory and implement the following inside:
-   - twentyfivePercentWebhook = "https://discord.com/api/webhooks/examplewebhook"
-   - twentyPercentWebhook = "https://discord.com/api/webhooks/examplewebhook"
-   - fifteenPercentWebhook = "https://discord.com/api/webhooks/examplewebhook"
-   - tenPercentWebhook = "https://discord.com/api/webhooks/examplewebhook"
-   - onePercentWebhook = "https://discord.com/api/webhooks/examplewebhook"
+   - oneToTenPercentWebhook = "https://discord.com/api/webhooks/examplewebhook"
+   - elevenToFifteenPercentWebhook = "https://discord.com/api/webhooks/examplewebhook"
+   - sixteenToTwentyPercentWebhook = "https://discord.com/api/webhooks/examplewebhook
+   - twentyOnePlusPercentWebhook = "https://discord.com/api/webhooks/examplewebhook"
    - stickerWebhook = "https://discord.com/api/webhooks/examplewebhook"
    - updateWebhook = "https://discord.com/api/webhooks/examplewebhook"
    - bot_token = "BotTokenExample"

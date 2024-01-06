@@ -4,7 +4,7 @@ csfloatNewItemsLink = "https://csfloat.com/api/v1/listings?limit=50&sort_by=most
 csfloatHighestDiscountLink = "https://csfloat.com/api/v1/listings?limit=50&sort_by=highest_discount&min_ref_qty=10&type=buy_now&min_price=500"
 csfloatBetterImageLink = "https://s.csgofloat.com/"
 collectionLink = "https://csgoskins.gg/collections/"
-skinbidItemsLink = "https://api.skinbid.com/api/search/auctions?take=120&skip=0&sellType=fixed_price&sort=discount%23desc&Pricegt=5&popular=false&goodDeals=true&currency=USD"
+skinbidItemsLink = "https://api.skinbid.com/api/search/auctions?take=30&skip=30&sellType=all&sort=created%23desc&goodDeals=false&currency=USD"
 skinbidLink = "https://skinbid.com/market/"
 
 pinkColor = 0xff00e6

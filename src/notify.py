@@ -6,26 +6,21 @@ class Notify:
         self.stickerWebhook = discord.SyncWebhook.from_url(secret.stickerWebhook)
         self.updateWebhook = discord.SyncWebhook.from_url(secret.updateWebhook)
 
-        self.onePercentWebhook = discord.SyncWebhook.from_url(secret.onePercentWebhook)
-        self.tenPercentWebhook = discord.SyncWebhook.from_url(secret.tenPercentWebhook)
-        self.fifteenPercentWebhook = discord.SyncWebhook.from_url(secret.fifteenPercentWebhook)
-        self.twentyPercentWebhook = discord.SyncWebhook.from_url(secret.twentyPercentWebhook)
-        self.twentyfivePercentWebhook = discord.SyncWebhook.from_url(secret.twentyfivePercentWebhook)
+        self.oneToTenPercentWebhook = discord.SyncWebhook.from_url(secret.oneToTenPercentWebhook)
+        self.elevenToFifteenPercentWebhook = discord.SyncWebhook.from_url(secret.elevenToFifteenPercentWebhook)
+        self.sixteenToTwentyPercentWebhook = discord.SyncWebhook.from_url(secret.sixteenToTwentyPercentWebhook)
+        self.twentyOnePlusPercentWebhook = discord.SyncWebhook.from_url(secret.twentyOnePlusPercentWebhook)
 
     def sendMessage(self, embed, isSkin, discount):
         if isSkin:
-
-            self.onePercentWebhook.send(embed=embed)
-
-            if discount >= 10:
-                self.tenPercentWebhook.send(embed=embed)
-            if discount >= 15:
-                self.fifteenPercentWebhook.send(embed=embed)
-            if discount >= 20:
-                self.twentyPercentWebhook.send(embed=embed)
-            if discount >= 25:
-                self.twentyfivePercentWebhook.send(embed=embed)
-
+            if discount < 11:
+                self.oneToTenPercentWebhook.send(embed=embed)
+            elif discount < 16:
+                self.elevenToFifteenPercentWebhook.send(embed=embed)
+            elif discount < 20:
+                self.sixteenToTwentyPercentWebhook.send(embed=embed)
+            else:
+                self.twentyOnePlusPercentWebhook.send(embed=embed)
 
         elif not isSkin:
             self.stickerWebhook.send(embed=embed)
