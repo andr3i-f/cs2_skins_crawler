@@ -1,15 +1,15 @@
-import secret
+import os
 import discord
 
 class Notify:
     def __init__(self):
-        self.stickerWebhook = discord.SyncWebhook.from_url(secret.stickerWebhook)
-        self.updateWebhook = discord.SyncWebhook.from_url(secret.updateWebhook)
+        self.stickerWebhook = discord.SyncWebhook.from_url(os.environ["STICKER_WH"])
+        self.updateWebhook = discord.SyncWebhook.from_url(os.environ["UPDATE_WH"])
 
-        self.oneToTenPercentWebhook = discord.SyncWebhook.from_url(secret.oneToTenPercentWebhook)
-        self.elevenToFifteenPercentWebhook = discord.SyncWebhook.from_url(secret.elevenToFifteenPercentWebhook)
-        self.sixteenToTwentyPercentWebhook = discord.SyncWebhook.from_url(secret.sixteenToTwentyPercentWebhook)
-        self.twentyOnePlusPercentWebhook = discord.SyncWebhook.from_url(secret.twentyOnePlusPercentWebhook)
+        self.oneToTenPercentWebhook = discord.SyncWebhook.from_url(os.environ["ONE_TO_TEN_WH"])
+        self.elevenToFifteenPercentWebhook = discord.SyncWebhook.from_url(os.environ["ELEVEN_TO_FIFTEEN_WH"])
+        self.sixteenToTwentyPercentWebhook = discord.SyncWebhook.from_url(os.environ["SIXTEEN_TO_TWENTY_WH"])
+        self.twentyOnePlusPercentWebhook = discord.SyncWebhook.from_url(os.environ["TWENTYONE_PLUS_WH"])
 
     def sendMessage(self, embed, isSkin, discount):
         if isSkin:
