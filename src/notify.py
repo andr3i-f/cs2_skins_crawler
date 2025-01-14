@@ -1,15 +1,17 @@
-import secret
 import discord
+import os
+from dotenv import load_dotenv
 
 class Notify:
     def __init__(self):
-        self.stickerWebhook = discord.SyncWebhook.from_url(secret.stickerWebhook)
-        self.updateWebhook = discord.SyncWebhook.from_url(secret.updateWebhook)
+        load_dotenv()
+        self.stickerWebhook = discord.SyncWebhook.from_url(os.getenv('STICKER_WH'))
+        self.updateWebhook = discord.SyncWebhook.from_url(os.getenv('UPDATE_WH'))
 
-        self.oneToTenPercentWebhook = discord.SyncWebhook.from_url(secret.oneToTenPercentWebhook)
-        self.elevenToFifteenPercentWebhook = discord.SyncWebhook.from_url(secret.elevenToFifteenPercentWebhook)
-        self.sixteenToTwentyPercentWebhook = discord.SyncWebhook.from_url(secret.sixteenToTwentyPercentWebhook)
-        self.twentyOnePlusPercentWebhook = discord.SyncWebhook.from_url(secret.twentyOnePlusPercentWebhook)
+        self.oneToTenPercentWebhook = discord.SyncWebhook.from_url(os.getenv('ONE_TO_TEN_PERCENT_WH'))
+        self.elevenToFifteenPercentWebhook = discord.SyncWebhook.from_url(os.getenv('ELEVEN_TO_FIFTEEN_PERCENT_WH'))
+        self.sixteenToTwentyPercentWebhook = discord.SyncWebhook.from_url(os.getenv('SIXTEEN_TO_TWENTY_PERCENT_WH'))
+        self.twentyOnePlusPercentWebhook = discord.SyncWebhook.from_url(os.getenv('TWENTY_ONE_PLUS_PERCENT_WH'))
 
     def sendMessage(self, embed, isSkin, discount):
         if isSkin:
